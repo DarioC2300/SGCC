@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="449.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.springfx.infraestructure.gui.controller.ConsultMaintenanceLogGuiController">
+    <children>
+        <TableView fx:id="maintenanceLogTable" layoutX="50.0" layoutY="130.0" prefHeight="260.0" prefWidth="707.0">
+            <columns>
+                <TableColumn prefWidth="55.39999580383301" text="ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="200.0" text="Descripción">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="description" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="100.0" text="Fecha">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="date" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="200.0" text="Dispositivo de Computadora">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="computerDevice" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="150.0" text="Periférico">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="peripheral" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="150.0" text="Técnico">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="technician" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Button fx:id="return" layoutX="681.0" layoutY="409.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: red;" styleClass="button" stylesheets="ConsultMaintenanceLogStyles.css" text="Regresar" textFill="white" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="113.0" stroke="DODGERBLUE" strokeType="INSIDE" width="800.0" />
+        <Label layoutX="240.0" layoutY="27.0" text="Consultar Equipos de Cómputo" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+      <ButtonBar layoutX="250.0" layoutY="73.0" prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+              <Button mnemonicParsing="false" onAction="#updateMaintenanceLog" style="-fx-background-color: green;" text="Actualizar" textFill="WHITE" />
+              <Button mnemonicParsing="false" onAction="#deleteMaintenanceLog" style="-fx-background-color: red;" text="Eliminar" textFill="WHITE" />
+        </buttons>
+      </ButtonBar>
+    </children>
+</AnchorPane>

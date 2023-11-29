@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.springfx.infraestructure.gui.controller.ConsultTechnicianController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="113.0" stroke="DODGERBLUE" strokeType="INSIDE" width="784.0" />
+        <Button layoutX="534.0" layoutY="409.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: red;" text="Regresar" textFill="WHITE" />
+      <ButtonBar layoutX="234.0" layoutY="73.0" prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+              <Button mnemonicParsing="false" onAction="#updateTechnician" style="-fx-background-color: green;" text="Actualizar" textFill="WHITE" />
+              <Button mnemonicParsing="false" onAction="#deleteTechnician" style="-fx-background-color: red;" text="Eliminar" textFill="WHITE" />
+        </buttons>
+      </ButtonBar>
+      <Label layoutX="250.0" layoutY="21.0" text="Consultar Tecnicos" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+        <TableView fx:id="technicianTable" layoutX="120.0" layoutY="130.0" prefHeight="267.0" prefWidth="527.0">
+            <columns>
+                <TableColumn prefWidth="123.00003051757812" text="ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="123.00003051757812" text="Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="123.00003051757812" text="Username">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="surname" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="123.00003051757812" text="Email">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="email" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="123.00003051757812" text="Address">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="address" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="123.00003051757812" text="Phone">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="phone" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

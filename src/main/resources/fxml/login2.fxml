@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane layoutX="224.0" layoutY="76.0" prefHeight="249.0" prefWidth="310.0" style="-fx-background-radius: 25; -fx-background-color: white;">
+            <children>
+                <TextField fx:id="lbUsername" layoutX="72.0" layoutY="53.0" prefHeight="25.0" prefWidth="174.0" promptText="Enter username">
+
+
+                </TextField>
+                <PasswordField fx:id="pfPassword" layoutX="72.0" layoutY="109.0" prefHeight="25.0" prefWidth="174.0" promptText="Enter Password">
+
+
+                </PasswordField>
+                <Button layoutX="111.0" layoutY="177.0" onAction="#login" prefHeight="41.0" prefWidth="87.0" styleClass="colorBackground" stylesheets="@color.css" text="Login" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="sideBar" layoutX="31.0" layoutY="53.0" prefHeight="295.0" prefWidth="220.0" style="-fx-background-radius: 25;" styleClass="colorBackground" stylesheets="@color.css">
+
+        </AnchorPane>
+      <Label layoutX="308.0" layoutY="44.0" prefHeight="32.0" prefWidth="141.0" text="Iniciar Sesion" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+
+          <Button layoutX="335.0" layoutY="327.0" onAction="#register" prefHeight="41.0" prefWidth="87.0" styleClass="colorBackground" stylesheets="@color.css" text="Crear Cuenta" />
+    </children>
+</AnchorPane>

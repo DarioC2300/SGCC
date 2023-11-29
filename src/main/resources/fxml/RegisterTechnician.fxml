@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="400.0" maxWidth="544.0" prefHeight="400.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.springfx.infraestructure.gui.controller.TechnicianGuiController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="113.0" stroke="DODGERBLUE" strokeType="INSIDE" width="571.0" />
+      <Label fx:id="lbSave" layoutX="161.0" layoutY="33.0" text="Registrar Tecnico" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="17.0" layoutY="136.0" text="Nombre" />
+      <Label layoutX="17.0" layoutY="168.0" text="Username" />
+      <Label layoutX="17.0" layoutY="201.0" text="Correo" />
+      <Label layoutX="14.0" layoutY="233.0" text="Contraseña" />
+      <Label layoutX="14.0" layoutY="265.0" text="Direccion" />
+      <Label layoutX="16.0" layoutY="302.0" text="Telefono" />
+      <TextField fx:id="tbName" layoutX="154.0" layoutY="132.0" />
+      <TextField fx:id="tbUsername" layoutX="154.0" layoutY="164.0" />
+      <TextField fx:id="tbEmail" layoutX="154.0" layoutY="197.0" />
+      <TextField fx:id="tbAddress" layoutX="154.0" layoutY="261.0" />
+      <TextField fx:id="tbPhone" layoutX="154.0" layoutY="298.0" />
+      <PasswordField fx:id="pfPassword" layoutX="155.0" layoutY="229.0" />
+      <ButtonBar layoutX="371.0" layoutY="339.0" prefHeight="40.0" prefWidth="200.0" />
+    <Button layoutX="308.0" layoutY="352.0" mnemonicParsing="false" onAction="#backToMain" style="-fx-background-color: red;" text="Regresar" textFill="WHITE" />
+      <Button fx:id="btnSave" layoutX="205.0" layoutY="352.0" mnemonicParsing="false" onAction="#save" style="-fx-background-color: green;" text="Registrar" textFill="WHITE" />
+   </children>
+</AnchorPane>

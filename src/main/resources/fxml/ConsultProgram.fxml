@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="495.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.springfx.infraestructure.gui.controller.ConsultProgramController">
+   <TableView fx:id="tableProgram" layoutX="26.0" layoutY="130.0" prefHeight="263.0" prefWidth="730.0">
+      <columns>
+         <TableColumn prefWidth="128.0" text="Nombre">
+            <cellValueFactory>
+               <PropertyValueFactory property="name" />
+            </cellValueFactory>
+         </TableColumn>
+         <TableColumn prefWidth="106.0" text="Versión">
+            <cellValueFactory>
+               <PropertyValueFactory property="version" />
+            </cellValueFactory>
+         </TableColumn>
+         <TableColumn prefWidth="177.0" text="Descripción">
+            <cellValueFactory>
+               <PropertyValueFactory property="description" />
+            </cellValueFactory>
+         </TableColumn>
+         <TableColumn prefWidth="211.0" text="Fecha de descarga">
+            <cellValueFactory>
+               <PropertyValueFactory property="installationDate" />
+            </cellValueFactory>
+         </TableColumn>
+
+         <TableColumn prefWidth="87.0" text="Tamaño">
+            <cellValueFactory>
+               <PropertyValueFactory property="size" />
+            </cellValueFactory>
+         </TableColumn>
+      </columns>
+   </TableView>
+   <Button fx:id="btnRegresar" layoutX="671.0" layoutY="434.0" mnemonicParsing="false" onAction="#back" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: red;" text="Regresar" textFill="#faefef">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Button>
+   <Pane prefHeight="114.0" prefWidth="795.0" style="-fx-background-color: #2B92FF;">
+      <children>
+         <Label layoutX="330.0" layoutY="22.0" text="Programas" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="24.0" />
+            </font>
+         </Label>
+         <Button fx:id="btnEliminar" layoutX="420.0" layoutY="77.0" mnemonicParsing="false" onAction="#deleteProgram" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: red;" text="Eliminar" textFill="#fffefe">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Button>
+         <Button fx:id="btnModificar" layoutX="280.0" layoutY="77.0" mnemonicParsing="false" onAction="#updateProgram" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: green;" text="Modificar" textFill="#f4f4f4">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Button>
+      </children>
+   </Pane>
+</AnchorPane>

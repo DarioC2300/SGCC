@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.springfx.infraestructure.gui.controller.MainGuiController">
+    <VBox style="-fx-background-color: dodgerblue;">
+        <Label style="-fx-font-size: 20px; -fx-padding: 10px; -fx-alignment: CENTER;" text="Menú para Sistema Gestor de Centros de Cómputo" textFill="WHITE" />
+    </VBox>
+    <VBox alignment="TOP_CENTER" spacing="20.0">
+        <TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+            <Tab text="Centros de Cómputo">
+                <content>
+                    <VBox alignment="TOP_LEFT" spacing="20.0">
+                        <Label style="-fx-font-size: 16px;" text="Gestión de Centros de Cómputo" />
+                     <Label prefHeight="121.0" prefWidth="616.0" text="En esta sección, puedes registrar y consultar información sobre los centros de cómputo disponibles en la facultad. Haz clic en 'Registrar Centro de Cómputo' para agregar nuevos centros o en 'Consultar Centro de Cómputo' para obtener detalles existentes." wrapText="true" />
+                        <Button fx:id="btnRegisterCC" onAction="#showRegisterCCView" style="-fx-background-color: green;" text="Registrar Centro de Cómputo" textFill="WHITE" />
+                        <Button fx:id="btnComputerCenters" onAction="#showComputerCentersView" style="-fx-background-color: green;" text="Consultar Centro de Cómputo" textFill="WHITE" />
+                    </VBox>
+                </content>
+            </Tab>
+            <Tab text="Equipos de Cómputo">
+                <content>
+                    <VBox alignment="TOP_LEFT" spacing="20.0">
+                        <Label style="-fx-font-size: 16px;" text="Gestión de Equipos de Cómputo" />
+                        <Label prefHeight="34.0" prefWidth="552.0" text="En esta sección, puedes registrar y consultar información sobre los equipos de cómputo en los centros. Utiliza 'Registrar Equipo de Cómputo' para agregar nuevos equipos o 'Consultar Equipos de Cómputo' para obtener detalles existentes." wrapText="true" />
+                        <Button fx:id="btnRegisterEC" onAction="#showRegisterECView" style="-fx-background-color: green;" text="Registrar Equipo de Cómputo" textFill="WHITE" />
+                        <Button fx:id="btnComputerDevices" onAction="#showComputerDevicesView" style="-fx-background-color: green;" text="Consultar Equipos de Cómputo" textFill="WHITE" />
+                    </VBox>
+                </content>
+            </Tab>
+            <Tab text="Periféricos">
+                <content>
+                    <VBox alignment="TOP_LEFT" spacing="20.0">
+                        <Label style="-fx-font-size: 16px;" text="Gestión de Periféricos" />
+                        <Label prefHeight="34.0" prefWidth="558.0" text="En esta sección, puedes registrar y consultar información sobre los periféricos asociados a los equipos. Utiliza 'Registrar Periférico' para agregar nuevos periféricos o 'Consultar Periféricos' para obtener detalles existentes." wrapText="true" />
+                        <Button fx:id="btnConsultPeripherals" onAction="#consultPeripherals" style="-fx-background-color: Green;" text="Registrar Periférico" textFill="WHITE" />
+                        <Button fx:id="btnPeripheral" onAction="#showPeripheralView" style="-fx-background-color: green;" text="Consultar Periféricos" textFill="WHITE" />
+                    </VBox>
+                </content>
+            </Tab>
+            <Tab text="Usuarios">
+                <content>
+                    <VBox alignment="TOP_LEFT" spacing="20.0">
+                        <Label style="-fx-font-size: 16px;" text="Gestión de Usuarios" />
+                        <Label prefHeight="34.0" prefWidth="588.0" text="En esta sección, puedes registrar y consultar información sobre los usuarios que tienen acceso al sistema. Utiliza 'Registrar Usuario' para agregar nuevos usuarios o 'Consultar Usuarios' para obtener detalles existentes." wrapText="true" />
+                        <Button fx:id="btnTechnician" onAction="#registerTechnician" style="-fx-background-color: green;" text="Registrar Usuario" textFill="WHITE" />
+                        <Button fx:id="btnConsultTechnician" onAction="#ConsultTechnician" style="-fx-background-color: green;" text="Consultar Usuarios" textFill="WHITE" />
+                    </VBox>
+                </content>
+            </Tab>
+            <Tab text="Programas">
+                <content>
+                    <VBox alignment="TOP_LEFT" spacing="20.0">
+                        <Label style="-fx-font-size: 16px;" text="Gestión de Programas" />
+                        <Label prefHeight="83.0" prefWidth="575.0" text="En esta sección, puedes registrar y consultar información sobre los programas de cómputo disponibles. Utiliza 'Registrar Programa de Cómputo' para agregar nuevos programas, 'Consultar Programas' para obtener detalles existentes, 'Asignar Programa a Equipo de Cómputo' para asignar programas a equipos específicos, y 'Consultar Programas Instalados' para verificar la lista de programas instalados." wrapText="true" />
+                        <Button fx:id="btnRegisterProgram" onAction="#registerProgram" style="-fx-background-color: green;" text="Registrar Programa de Cómputo" textFill="WHITE" />
+                        <Button fx:id="btnConsultProgram" onAction="#consultProgram" style="-fx-background-color: green;" text="Consultar Programas" textFill="WHITE" />
+                        <Button fx:id="btnAssingProgram" onAction="#assingProgram" style="-fx-background-color: green;" text="Asignar Programa a Equipo de Cómputo" textFill="WHITE" />
+                        <Button fx:id="btnConsultECP" onAction="#consultECP" style="-fx-background-color: green;" text="Consultar Programas Instalados" textFill="WHITE" />
+                    </VBox>
+                </content>
+            </Tab>
+            <Tab text="Bitácora">
+                <content>
+                    <VBox alignment="TOP_LEFT" spacing="20.0">
+                        <Label style="-fx-font-size: 16px;" text="Gestión de Bitácora de Mantenimiento" />
+                        <Label prefHeight="67.0" prefWidth="483.0" text="En esta sección, puedes registrar y consultar la bitácora de mantenimiento de equipos. Utiliza 'Registrar Bitácora de Mantenimiento' para agregar nuevas entradas o 'Consultar Bitácora de Mantenimiento' para obtener detalles existentes." wrapText="true" />
+                        <Button fx:id="btnLog" onAction="#registerLog" style="-fx-background-color: green;" text="Registrar Bitácora de Mantenimiento" textFill="WHITE" />
+                        <Button fx:id="btnConsultLog" onAction="#consultLog" style="-fx-background-color: green;" text="Consultar Bitácora de Mantenimiento" textFill="WHITE" />
+                    </VBox>
+                </content>
+            </Tab>
+        </tabs>
+    </TabPane>
+</VBox>
+</VBox>

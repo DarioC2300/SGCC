@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="449.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.springfx.infraestructure.gui.controller.ConsultProgramInstalled">
+
+    <children>
+            <TableView fx:id="computerDevicesTable" layoutX="25.0" layoutY="86.0" prefHeight="149.0" prefWidth="509.0">
+                <columns>
+                    <TableColumn prefWidth="50" text="ID">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="id" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="50" text="Clave">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="identificationKey" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="200" text="Nombre">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="name" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="200" text="Marca">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="brand" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="200" text="Modelo">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="model" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="200" text="Precio">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="price" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="200" text="Tipo">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="type" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="200" text="Fecha de Adquicisión">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="adquisitionDate" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+            <Button layoutX="534.0" layoutY="409.0" mnemonicParsing="false" onAction="#backtomain" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: red;" text="Regresar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="75.0" stroke="DODGERBLUE" strokeType="INSIDE" width="800.0" />
+            <Label layoutX="240.0" layoutY="27.0" text="Consultar Programas instalados" textFill="WHITE">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            </Label>
+              <Button fx:id="consultProgramInstalled" layoutX="562.0" layoutY="161.0" mnemonicParsing="false" onAction="#consultProgram" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: green;" text="Consultar Programas " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+              <Button fx:id="deleteInstalled" layoutX="562.0" layoutY="200.0" mnemonicParsing="false" onAction="#deleteInstalled" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #F93B4F;" text="Eliminar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableProgram" layoutX="14.0" layoutY="270.0" prefHeight="130.0" prefWidth="710.0">
+         <columns>
+            <TableColumn prefWidth="128.0" text="Nombre">
+               <cellValueFactory>
+                  <PropertyValueFactory property="name" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="106.0" text="Versión">
+               <cellValueFactory>
+                  <PropertyValueFactory property="version" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="177.0" text="Descripción">
+               <cellValueFactory>
+                  <PropertyValueFactory property="description" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="211.0" text="Fecha de descarga">
+               <cellValueFactory>
+                  <PropertyValueFactory property="installationDate" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="87.0" text="Tamaño">
+               <cellValueFactory>
+                  <PropertyValueFactory property="size" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+    </children>
+</AnchorPane>

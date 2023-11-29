@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="449.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.springfx.infraestructure.gui.controller.ConsultPeripheralGuiController">
+   <children>
+       <TableView fx:id="tPheripheralTable" layoutX="70.0" layoutY="130.0" prefHeight="260.0" prefWidth="655.0">
+       <columns>
+          <TableColumn prefWidth="55.39999580383301" text="ID">
+              <cellValueFactory>
+                  <PropertyValueFactory property="id" />
+              </cellValueFactory>
+          </TableColumn>
+
+          <TableColumn prefWidth="110.99999237060547" text="Identificacion">
+              <cellValueFactory>
+                  <PropertyValueFactory property="identificationKey" />
+              </cellValueFactory>
+          </TableColumn>
+
+            <TableColumn prefWidth="156.99996948242188" text="Marca">
+                <cellValueFactory>
+                    <PropertyValueFactory property="brand" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn prefWidth="122.0" text="Modelo">
+                <cellValueFactory>
+                    <PropertyValueFactory property="model" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn prefWidth="123.00003051757812" text="Tipo">
+                <cellValueFactory>
+                    <PropertyValueFactory property="type" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn prefWidth="87.39996337890625" text="Precio">
+                <cellValueFactory>
+                    <PropertyValueFactory property="price" />
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+      </TableView>
+      <Button layoutX="534.0" layoutY="409.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: red;" text="Regresar" textFill="WHITE" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="113.0" stroke="DODGERBLUE" strokeType="INSIDE" width="800.0" />
+      <Label layoutX="250.0" layoutY="21.0" text="Consultar Perifericos" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="234.0" layoutY="73.0" prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#updatePeripheral" style="-fx-background-color: green;" text="Actualizar" textFill="WHITE" />
+            <Button fx:id="deletePeripheral" mnemonicParsing="false" onAction="#deletePeripheral" style="-fx-background-color: red;" text="Eliminar" textFill="WHITE" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

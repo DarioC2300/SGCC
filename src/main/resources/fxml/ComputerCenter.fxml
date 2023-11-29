@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="449.0" maxWidth="784.0" prefHeight="449.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.springfx.infraestructure.gui.controller.ComputerCenterGuiController">
+    <children>
+        <Button layoutX="534.0" layoutY="409.0" mnemonicParsing="false" onAction="#backtomain" style="-fx-background-color: red;" text="Regresar" textFill="WHITE" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="113.0" stroke="DODGERBLUE" strokeType="INSIDE" width="800.0" />
+        <Label layoutX="199.0" layoutY="27.0" text="Consultar Centros de Cómputo" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <ButtonBar layoutX="234.0" layoutY="73.0" prefHeight="40.0" prefWidth="200.0">
+            <buttons>
+                <Button fx:id="updateCC" mnemonicParsing="false" onAction="#updateCC" style="-fx-background-color: green;" text="Actualizar" textFill="WHITE" />
+                <Button fx:id="deleteCC" mnemonicParsing="false" onAction="#deleteCC" style="-fx-background-color: red;" text="Eliminar" textFill="WHITE" />
+            </buttons>
+        </ButtonBar>
+            <TableView fx:id="computerCenterTable" layoutX="120.0" layoutY="130.0" prefHeight="260.0" prefWidth="500.0">
+                <columns>
+                    <TableColumn prefWidth="100" text="ID">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="id" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="400" text="Name">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="name" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+    </children>
+</AnchorPane>

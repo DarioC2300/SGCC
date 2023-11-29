@@ -1,0 +1,19 @@
+/* styles.css */
+
+.root {
+    -fx-background-color: #c0c0c0; /* Fondo gris claro */
+}
+
+#maintenanceLogTable {
+    -fx-background-color: #ffffff; /* Fondo blanco para la tabla */
+}
+
+.button {
+    -fx-font-size: 14px; /* Tamaño de fuente para los botones */
+    -fx-background-color: #4caf50; /* Fondo verde para los botones */
+    -fx-text-fill: #ffffff; /* Texto blanco para los botones */
+}
+
+.button:hover {
+    -fx-background-color: #45a049; /* Cambio de color al pasar el ratón sobre los botones */
+}
