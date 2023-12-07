@@ -36,18 +36,18 @@ public class LogGuiController extends AbstractGuiController{
     @FXML
     public DatePicker dpMaintenanceDate;
     public boolean isUpdate = false;
-    public MaintenanceLog maintenanceLog;
+    public MaintenanceLog maintenanceLog = new MaintenanceLog();
     public Button btnSave;
     public Label lbBitacora;
 
 
 
     public LogGuiController(
-        ApplicationContext applicationContext,
-        MaintenanceLogService maintenanceLogService,
-        ComputerDeviceService computerDeviceService,
-        PeripheralService peripheralService,
-        TechnicianService technicianService
+            ApplicationContext applicationContext,
+            MaintenanceLogService maintenanceLogService,
+            ComputerDeviceService computerDeviceService,
+            PeripheralService peripheralService,
+            TechnicianService technicianService
     ) throws IOException {
         super(applicationContext);
         this.maintenanceLogService = maintenanceLogService;
@@ -63,14 +63,25 @@ public class LogGuiController extends AbstractGuiController{
             stage.setMaxHeight(500);
             stage.setMinHeight(500);
             stage.setMinWidth(650);
+            initializeComboBox();
+            if (isUpdate) {
+                updateFields();
+            }else{
+                ComboBox<?>[] combo = {cbTechnician, cbPeripheral, cbComputerEquipment};
+                cleanFields(combo);
+            }
         });
+
     }
 
     public void backToMain(javafx.event.ActionEvent actionEvent) {
+        isUpdate = false;
+        maintenanceLog = new MaintenanceLog();
         openMainWindowAndCloseCurrent((javafx.stage.Stage) cbPeripheral.getScene().getWindow());
     }
 
     public void initializeComboBox(){
+
         var devices = FXCollections.observableArrayList(computerDeviceService.getAll());
         var peripherals = FXCollections.observableArrayList(peripheralService.getAll());
         var technician = FXCollections.observableArrayList(technicianService.getAll());
@@ -78,7 +89,6 @@ public class LogGuiController extends AbstractGuiController{
         this.cbComputerEquipment.setItems(devices);
         this.cbPeripheral.setItems(peripherals);
         this.cbTechnician.setItems(technician);
-
     }
 
     public void save(javafx.event.ActionEvent actionEvent) {
@@ -139,6 +149,7 @@ public class LogGuiController extends AbstractGuiController{
             comboBox.getSelectionModel().clearSelection();
         }
         dpMaintenanceDate.setValue(null);
+        taDescription.setText("");
     }
 
     public void updateFields(){

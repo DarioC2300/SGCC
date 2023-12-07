@@ -60,6 +60,9 @@ public class RegisterProgramGuiController extends AbstractGuiController{
                     .size(tfTamaño.getText())
             .build();
 
+            if (isUpdate){
+                software.setId(this.software.getId());
+            }
             var responce = softwareService.save(software);
             if (responce != null) {
                 showAlert(Alert.AlertType.INFORMATION, "Guardado Exitoso", "El Programa Fue Guardado Exitosamente");

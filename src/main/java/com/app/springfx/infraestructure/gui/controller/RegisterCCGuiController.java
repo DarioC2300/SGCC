@@ -62,10 +62,10 @@ public class RegisterCCGuiController extends AbstractGuiController{
         }
         var responce = computerCenterService.save(computerCenter);
             if(responce != null){
-                showAlert(Alert.AlertType.INFORMATION, "Guardado Exitoso", "El Periferico Fue Guardado Exitosamente");
+                showAlert(Alert.AlertType.INFORMATION, "Guardado Exitoso", "El Centro de Cómputo Fue Guardado Exitosamente");
                 cleanFields(textField);
             }else {
-                showAlert(Alert.AlertType.ERROR, "Error en la conexion", "El Periferico No Pudo Ser Guardado Con Exito");
+                showAlert(Alert.AlertType.ERROR, "Error en la conexion", "El Centro de Cómputo No Pudo Ser Guardado Con Exito");
             }
 
         }

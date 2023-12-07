@@ -33,14 +33,9 @@
             <Button fx:id="botnLogin" layoutX="106.0" layoutY="418.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #0093ff;" text="Sign in" textFill="WHITE" />
 
             <Button fx:id="btnRegister" layoutX="100.0" layoutY="458.0" mnemonicParsing="false" onAction="#Register" prefHeight="27.0" prefWidth="82.0" style="-fx-background-color: white; -fx-border-color: transparent; " text="Registrarse" textFill="black">
-               <cursor>
-                  
-               </cursor>
             </Button>
             <PasswordField fx:id="txtPassword" layoutX="67.0" layoutY="333.0" promptText="Password" style="-fx-border-color: #0093ff; -fx-border-width: 0px 0px 2px 0px; -fx-background-color: transparen;" />
             <TextField fx:id="txtUserName" layoutX="67.0" layoutY="256.0" promptText=" User Name" style="-fx-border-color: #0093ff; -fx-border-width: 0px 0px 2px 0px; -fx-background-color: transparent;" />
-            <Hyperlink layoutX="73.0" layoutY="455.0" />
-            <Button layoutX="253.0" layoutY="2.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="28.0" style="-fx-background-color: transparent;" />
             <Text fill="#7c7979" layoutX="66.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inicio de Sesión">
                <font>
                   <Font size="22.0" />

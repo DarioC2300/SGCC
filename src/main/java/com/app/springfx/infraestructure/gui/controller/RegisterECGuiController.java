@@ -69,10 +69,10 @@ public class RegisterECGuiController extends AbstractGuiController{
             }
             var responce = computerDeviceService.save(computerDevice);
             if (responce != null) {
-                showAlert(Alert.AlertType.INFORMATION, "Guardado Exitoso", "El Periferico Fue Guardado Exitosamente");
+                showAlert(Alert.AlertType.INFORMATION, "Guardado Exitoso", "El Equipo de Cómputo Fue Guardado Exitosamente");
                 cleanFields(textField);
             } else {
-                showAlert(Alert.AlertType.ERROR, "Error en la conexion", "El Periferico No Pudo Ser Guardado Con Exito");
+                showAlert(Alert.AlertType.ERROR, "Error en la conexion", "El Equipo de Cómputo No Pudo Ser Guardado Con Exito");
             }
         }
     }

@@ -128,7 +128,7 @@ public class MainGuiController extends AbstractGuiController {
     }
 
     public void ConsultTechnician(ActionEvent actionEvent) {
-        voidOpenWindowAndCloseCurrent("Consultar Tecnicos", consultTechnician, (Stage) btnTechnician.getScene().getWindow());
+        voidOpenWindowAndCloseCurrent("Consultar Tecnicos", consultTechnician, (Stage) btnConsultLog.getScene().getWindow());
     }
 
     public void registerProgram(ActionEvent actionEvent) {

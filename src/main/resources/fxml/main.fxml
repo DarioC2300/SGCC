@@ -35,8 +35,8 @@
                   <VBox alignment="TOP_LEFT" spacing="20.0">
                      <Label style="-fx-font-size: 16px;" text="Gestión de Periféricos" />
                      <Label prefHeight="34.0" prefWidth="558.0" text="En esta sección, puedes registrar y consultar información sobre los periféricos asociados a los equipos. Utiliza 'Registrar Periférico' para agregar nuevos periféricos o 'Consultar Periféricos' para obtener detalles existentes." wrapText="true" />
-                     <Button fx:id="btnConsultPeripherals" onAction="#consultPeripherals" style="-fx-background-color: Green;" text="Registrar Periférico" textFill="WHITE" />
-                     <Button fx:id="btnPeripheral" onAction="#showPeripheralView" style="-fx-background-color: green;" text="Consultar Periféricos" textFill="WHITE" />
+                     <Button fx:id="btnPeripheral" onAction="#showPeripheralView" style="-fx-background-color: Green;" text="Registrar Periférico" textFill="WHITE" />
+                     <Button fx:id="btnConsultPeripherals" onAction="#consultPeripherals" style="-fx-background-color: green;" text="Consultar Periféricos" textFill="WHITE" />
                   </VBox>
                </content>
             </Tab>
@@ -45,7 +45,6 @@
                   <VBox alignment="TOP_LEFT" spacing="20.0">
                      <Label style="-fx-font-size: 16px;" text="Gestión de Usuarios" />
                      <Label prefHeight="34.0" prefWidth="588.0" text="En esta sección, puedes registrar y consultar información sobre los usuarios que tienen acceso al sistema. Utiliza 'Registrar Usuario' para agregar nuevos usuarios o 'Consultar Usuarios' para obtener detalles existentes." wrapText="true" />
-                     <Button fx:id="btnTechnician" onAction="#registerTechnician" style="-fx-background-color: green;" text="Registrar Usuario" textFill="WHITE" />
                      <Button fx:id="btnConsultTechnician" onAction="#ConsultTechnician" style="-fx-background-color: green;" text="Consultar Usuarios" textFill="WHITE" />
                   </VBox>
                </content>

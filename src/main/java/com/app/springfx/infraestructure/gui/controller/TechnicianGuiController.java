@@ -72,7 +72,7 @@ public class TechnicianGuiController extends AbstractGuiController{
         TextField[] textFields = {tbName, tbUsername, tbEmail, tbPhone, tbAddress};
         if (validateFields(textFields)){
 
-            if (existsByUsername(tbUsername.getText())){
+            if (existsByUsername(tbUsername.getText())&& !isUpdate){
                 showAlert(Alert.AlertType.ERROR, "Error", "El Tecnico con el username " + tbUsername.getText() + "Ya Existe");
             }else {
                 var technician = Technician.builder()
